@@ -22,7 +22,9 @@ public class TestaMetodos {
         System.out.println(contaDaMarcela.saldo);
         System.out.println(contaDoPaulo.saldo);
 
-        contaDoPaulo.titular = "Paulo Silveira";
-        System.out.println(contaDoPaulo.titular);
+
+        contaDoPaulo.titular = new Cliente();
+        contaDoPaulo.titular.nome = "Paulo";
+        System.out.println(contaDoPaulo.titular.nome);
     }
 }
