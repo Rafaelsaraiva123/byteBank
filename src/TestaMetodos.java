@@ -1,6 +1,6 @@
 public class TestaMetodos {
     public static void main(String[] args) {
-        Conta contaDoPaulo = new Conta();
+        Conta contaDoPaulo = new Conta(123,432);
         contaDoPaulo.deposita(100);
         contaDoPaulo.deposita(50);
         System.out.println(contaDoPaulo.getSaldo());
@@ -9,7 +9,7 @@ public class TestaMetodos {
         System.out.println(contaDoPaulo.getSaldo());
         System.out.println(conseguiuRetirar);
 
-        Conta contaDaMarcela = new Conta();
+        Conta contaDaMarcela = new Conta(321,542);
         contaDaMarcela.deposita(1000);
 
         boolean sucessoTransferencia = contaDaMarcela.transfere(300, contaDoPaulo);
@@ -21,6 +21,7 @@ public class TestaMetodos {
         }
         System.out.println(contaDaMarcela.getSaldo());
         System.out.println(contaDoPaulo.getSaldo());
+        System.out.println(Conta.getTotal());
 
     }
 }
